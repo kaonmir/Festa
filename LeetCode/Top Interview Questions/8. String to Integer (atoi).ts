@@ -7,13 +7,13 @@ function myAtoi(s: string): number {
 
   // Check if the next character (if not already at the end of the string) is '-' or '+'.
   const isMinus = s.charAt(0) === "-";
-  for (let i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length; i++) { 
     const c = s.charAt(i);
     if (i === 0 && (c === "-" || c === "+")) continue;
     if (/\d/.test(c) === false) break;
     answer = answer + c;
   }
-
+ 
   if (answer === "") return 0;
 
   const answerNum: number = parseInt(answer) * (isMinus ? -1 : 1);
