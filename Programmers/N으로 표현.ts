@@ -10,7 +10,7 @@ function solution(n: number, num: number) {
   for (let i = 2; i < 9; i++) {
     table[i].push(parseInt(n.toString().repeat(i))); // 555555
     let l = 1;
-    const set = new Set<number>(); 
+    const set = new Set<number>();
     while (l <= Math.floor(i / 2)) {
       const r = i - l;
       table[l].forEach((a) => {
