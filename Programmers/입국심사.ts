@@ -14,7 +14,6 @@ function solution(n: number, times: number[]) {
     if (capacity >= n) r = mid;
     else l = mid + 1;
   }
-
   return l;
 }
 
