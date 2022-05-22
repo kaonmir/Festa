@@ -1,0 +1,1 @@
+(fn [lst] (reduce #(+ %1 %2) 0 (filter odd? lst)))
