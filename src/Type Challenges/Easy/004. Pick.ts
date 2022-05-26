@@ -1,6 +1,11 @@
 // https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.ko.md
+// type Record<K extends string | number | symbol, T> = { [P in K]: T; }
 
-// 아래 테스트를 통과하게 만드시오.
+type MyPick<T, K extends keyof T> = {[P in K]: T[P]};
+
+// 아래는 변경하지마시오.
+
+/*
 
 interface Todo {
   title: string;
@@ -14,3 +19,5 @@ const todo: TodoPreview = {
   title: "Clean room",
   completed: false,
 };
+
+*/

@@ -7,7 +7,8 @@
 // string이 되어야 합니다.
 type HelloWorld = string;
 
-// 아래의 테스트가 통과하도록 만드세요.
+// 아래는 변경하지마시오.
+
 import type {Equal, Expect, NotAny} from "@type-challenges/utils";
 
 type test = Expect<Equal<HelloWorld, string>>;
