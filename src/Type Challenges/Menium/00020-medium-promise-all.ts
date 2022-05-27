@@ -23,9 +23,16 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function PromiseAll<T extends readonly unknown[]>(
-  values: T
-): Promise<{[P in keyof T]: T[P] extends Promise<infer R> ? R : T[P]}>;
+declare function PromiseAll<T extends unknown[]>(
+  values: readonly [...T]
+): Promise<{
+  [P in keyof T]: T[P] extends Promise<infer R> ? R : T[P];
+  //
+  // (method) PromiseConstructor.resolve<number>(value: number | PromiseLike<number>): Promise<number>
+}>;
+
+const A = Promise.resolve(3);
+type B = typeof A extends Promise<infer R> ? R : false;
 
 /* _____________ Test Cases _____________ */
 import type {Equal, Expect} from "@type-challenges/utils";
