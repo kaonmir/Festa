@@ -37,7 +37,7 @@ function solution(board: number[][]) {
       table[x][y].left = table[x][y].right = 0;
     }
 
-    // 자체 갱신
+    //  자체 갱신
 
     const t = table[x][y];
     table[x][y].up = Math.min(t.up, t.down, t.left + CORNER, t.right + CORNER);
