@@ -94,7 +94,7 @@ _temp = [
   [0, 0, 0],
   [0, 0, 0],
 ];
-console.log(solution(_temp)); // 900
+console.log(solution(_temp)); //  900
 
 _temp = [
   [0, 0, 0, 0, 0, 0, 0, 1],
