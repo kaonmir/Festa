@@ -16,6 +16,8 @@ const response: _Response = {
   body: "api response",
 };
 
+const redirectCodes = [301, 302, 303, 307, 308];
+
 async function solution(
   request: _Request,
   targetUrl: string
@@ -23,13 +25,7 @@ async function solution(
   const response = await request(targetUrl);
 
   // if redirect code 301 302 303 307 308
-  if (
-    response.code === 301 ||
-    response.code === 302 ||
-    response.code === 303 ||
-    response.code === 307 ||
-    response.code === 308
-  ) {
+  if (redirectCodes.includes(response.code)) {
     return solution(request, response.header.location);
   }
   return response;

@@ -12,7 +12,7 @@ function solution(id: string) {
   const length = id.length;
   const half = Math.floor(length / 2);
   const l = Math.floor((length - half) / 2);
-  const r = length - Math.ceil((length - half) / 2);
+  const r = length - half - l;
 
   return id.slice(0, l) + "*".repeat(half) + id.slice(r);
 }

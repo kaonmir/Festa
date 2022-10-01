@@ -7,7 +7,7 @@ function solution(amounts: string[]) {
   const answer = amounts
     .map((amount) => amount.replace("원", ""))
     .map((amount) => amount.replace(/,/g, ""))
-    .reduce((acc: number, cur: string) => parseInt(cur) + acc, 0);
+    .reduce((acc, cur) => parseInt(cur) + acc, 0);
   return answer;
 }
 
